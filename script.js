@@ -50,11 +50,13 @@ function dropPetalBatch() {
             createPetal(() => {
                 remaining--;
                 if (remaining === 0) {
-                    window.setTimeout(dropPetalBatch, 5000);
+                    dropPetalBatch();
                 }
             });
         }, i * 1100);
     }
 }
 
-window.setTimeout(dropPetalBatch, 500);
+dropPetalBatch();
+
+
