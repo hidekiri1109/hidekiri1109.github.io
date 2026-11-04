@@ -20,7 +20,7 @@ body {
     overflow: hidden;
     background-color: #101a31;
     /* Thay background.jpg bằng tên ảnh/GIF/WebP đặt trong assets. */
-    background-image: url("assets/background.jpg");
+    background-image: url("assets/hideerick.PNG");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -93,7 +93,8 @@ body {
         transform: translate3d(var(--drift), calc(100vh + 28px), 0) rotate(330deg);
     }
 }
-
+
+
 
 .container {
     width: min(92%, 980px);
