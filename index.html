@@ -12,7 +12,18 @@
 
 <body>
 
-    <div class="background"></div>
+    <div class="background" aria-hidden="true">
+        <!-- Ảnh tĩnh hoặc GIF/WebP: thêm file vào assets và sửa src bên dưới. -->
+        <img class="background-image" src="assets/background.jpg" alt="">
+
+        <!--
+        Dùng video thay ảnh: bỏ comment khối này và xóa/comment thẻ img phía trên.
+        Thêm video vào assets/background.mp4. Video nền cần muted để tự chạy trên trình duyệt.
+        <video class="background-video" autoplay muted loop playsinline poster="assets/background.jpg">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        -->
+    </div>
     <div class="overlay"></div>
     <div id="petals" aria-hidden="true"></div>
 
@@ -33,10 +44,10 @@
 
                 <section class="social-section" aria-label="Hide's links">
                     <p class="section-title">FIND ME HERE</p>
-                    <a class="social-link" href="https://www.youtube.com/@Hidekiri_ch" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span>↗</span></a>
-                    <a class="social-link" href="https://discordapp.com/users/399427359066947584" target="_blank" rel="noopener noreferrer"><span>Discord</span><span>↗</span></a>
-                    <a class="social-link" href="https://discord.gg/JYhWqETWYr" target="_blank" rel="noopener noreferrer"><span>Discord Community</span><span>↗</span></a>
-                    <a class="social-link" href="https://www.tiktok.com/@hideyoshi1109" target="_blank" rel="noopener noreferrer"><span>TikTok</span><span>↗</span></a>
+                    <a class="social-link" href="https://www.youtube.com/@Hidekiri_ch" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/star.svg" alt="" aria-hidden="true"><span>YouTube</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://discordapp.com/users/399427359066947584" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/branch.svg" alt="" aria-hidden="true"><span>Discord</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://discord.gg/JYhWqETWYr" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/star.svg" alt="" aria-hidden="true"><span>Discord Community</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://www.tiktok.com/@hideyoshi1109" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/branch.svg" alt="" aria-hidden="true"><span>TikTok</span></span><span>↗</span></a>
                 </section>
             </article>
 
@@ -54,10 +65,10 @@
 
                 <section class="social-section" aria-label="Second person's links">
                     <p class="section-title">FIND ME HERE</p>
-                    <a class="social-link" href="https://www.youtube.com/@Ricco_Erick/" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span>↗</span></a>
-                    <a class="social-link" href="https://discordapp.com/users/917375324793241650" target="_blank" rel="noopener noreferrer"><span>Discord</span><span>↗</span></a>
-                    <a class="social-link" href="https://discord.gg/JYhWqETWYr" target="_blank" rel="noopener noreferrer"><span>Discord Community</span><span>↗</span></a>
-                    <a class="social-link" href="https://www.tiktok.com/@ricco_erick" target="_blank" rel="noopener noreferrer"><span>TikTok</span><span>↗</span></a>
+                    <a class="social-link" href="https://www.youtube.com/@Ricco_Erick/" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/star.svg" alt="" aria-hidden="true"><span>YouTube</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://discordapp.com/users/917375324793241650" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/branch.svg" alt="" aria-hidden="true"><span>Discord</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://discord.gg/JYhWqETWYr" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/star.svg" alt="" aria-hidden="true"><span>Discord Community</span></span><span>↗</span></a>
+                    <a class="social-link" href="https://www.tiktok.com/@ricco_erick" target="_blank" rel="noopener noreferrer"><span class="button-label"><img class="button-decor" src="assets/decor/branch.svg" alt="" aria-hidden="true"><span>TikTok</span></span><span>↗</span></a>
                 </section>
             </article>
         </div>
@@ -88,3 +99,5 @@
 
 </body>
 </html>
+
+

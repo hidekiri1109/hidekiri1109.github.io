@@ -17,10 +17,18 @@ body {
     position: fixed;
     inset: 0;
     z-index: -3;
+    overflow: hidden;
+    background: linear-gradient(135deg, #101a31 0%, #183452 48%, #311a38 100%);
+}
 
-    background:
-        url("assets/background.jpg")
-        center / cover no-repeat;
+.background-image,
+.background-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .overlay {
@@ -229,29 +237,94 @@ h1 {
 }
 
 .social-link {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    overflow: hidden;
+    isolation: isolate;
     padding: 16px 20px;
-
     text-decoration: none;
     color: #eef5ff;
-
     background: rgba(25, 47, 79, 0.70);
     border: 1px solid rgba(143, 207, 255, 0.28);
     border-radius: 10px;
-
     font-size: 14px;
-    transition: 0.3s;
+    --link-neon: #72dfff;
+    --link-glow: rgba(114, 223, 255, 0.3);
+    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.social-link:hover {
-    background: rgba(105, 166, 219, 0.28);
-    border-color: #8fcfff;
-    transform: translateY(-3px);
+.person-card:nth-child(2) .social-link {
+    --link-neon: #ff76ca;
+    --link-glow: rgba(255, 118, 202, 0.32);
 }
 
+.social-link::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -40%;
+    bottom: -40%;
+    left: -70%;
+    width: 42%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.2), transparent);
+    transform: skewX(-22deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+}
+
+.social-link span {
+    position: relative;
+    z-index: 1;
+}
+
+.button-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-decor {
+    display: block;
+    flex: 0 0 auto;
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+    opacity: 0.92;
+    filter: drop-shadow(0 0 4px var(--link-neon));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.button-decor[src$="branch.svg"] { width: 24px; }
+.social-link:hover .button-decor,
+.social-link:focus-visible .button-decor {
+    transform: rotate(9deg) scale(1.12);
+    filter: drop-shadow(0 0 7px var(--link-neon));
+}
+.social-link > span:last-child {
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+    background: rgba(65, 105, 150, 0.38);
+    border-color: var(--link-neon);
+    box-shadow: 0 0 16px var(--link-glow), inset 0 0 12px rgba(255,255,255,.04);
+    transform: translateY(-3px) scale(1.01);
+    outline: none;
+}
+
+.social-link:hover::before,
+.social-link:focus-visible::before { left: 135%; }
+
+.social-link:hover > span:last-child,
+.social-link:focus-visible > span:last-child {
+    color: var(--link-neon);
+    transform: translate(3px, -2px);
+}
+
+.social-link:active { transform: translateY(0) scale(.985); }
 .music-section {
     margin-top: 35px;
 }
@@ -298,19 +371,26 @@ h1 {
 }
 
 #musicButton {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border: 1px solid #8fcfff;
     border-radius: 50%;
-
-    background: transparent;
+    background: rgba(62, 115, 160, 0.2);
     color: white;
     cursor: pointer;
+    box-shadow: 0 0 0 rgba(143, 207, 255, 0);
+    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
 }
 
-#musicButton:hover {
-    background: #db73aa;
+#musicButton:hover,
+#musicButton:focus-visible {
+    background: rgba(219, 115, 170, 0.65);
+    box-shadow: 0 0 16px rgba(255, 118, 202, 0.55);
+    transform: scale(1.1);
+    outline: none;
 }
+
+#musicButton:active { transform: scale(.92); }
 
 footer {
     margin-top: 55px;
@@ -347,5 +427,11 @@ footer {
     .petal { animation-duration: var(--duration) !important; }
     *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+
+
+
+
+
 
 
