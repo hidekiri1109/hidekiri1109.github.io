@@ -38,8 +38,8 @@ body {
 
     background:
         linear-gradient(
-            rgba(8, 19, 43, 0.64),
-            rgba(9, 18, 39, 0.93)
+            rgba(8, 19, 43, 0.42),
+            rgba(9, 18, 39, 0.74)
         );
 }
 
@@ -427,6 +427,7 @@ footer {
     .petal { animation-duration: var(--duration) !important; }
     *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
 
 
 
