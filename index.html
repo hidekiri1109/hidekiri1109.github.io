@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hide & Friend | Duo Bio</title>
+    <meta name="description" content="The links and worlds of Hide and a friend.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div id="petals" aria-hidden="true"></div>
+
+    <main class="container">
+
+        <div class="duo-grid">
+            <!-- PERSON 1: edit the photo, name, intro, and links in this card. -->
+            <article class="person-card">
+                <header class="profile">
+                    <div class="avatar-frame">
+                        <img src="assets/avatar.png" alt="Hide Avatar">
+                    </div>
+                    <p class="eyebrow">WELCOME TO MY WORLD</p>
+                    <h1>Hide</h1>
+                    <p class="subtitle">A little flower blooming in the abyss.</p>
+                    <div class="description">VTuber · Streamer · Creator</div>
+                </header>
+
+                <section class="social-section" aria-label="Hide's links">
+                    <p class="section-title">FIND ME HERE</p>
+                    <a class="social-link" href="https://www.youtube.com/@Hidekiri_ch" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span>↗</span></a>
+                    <a class="social-link" href="https://discordapp.com/users/399427359066947584" target="_blank" rel="noopener noreferrer"><span>Discord</span><span>↗</span></a>
+                    <a class="social-link" href="https://discord.gg/JYhWqETWYr" target="_blank" rel="noopener noreferrer"><span>Discord Community</span><span>↗</span></a>
+                    <a class="social-link" href="https://www.tiktok.com/@hideyoshi1109" target="_blank" rel="noopener noreferrer"><span>TikTok</span><span>↗</span></a>
+                </section>
+            </article>
+
+            <!-- PERSON 2: replace the photo path, name, intro, and links with the second person's details. -->
+            <article class="person-card">
+                <header class="profile">
+                    <div class="avatar-frame">
+                        <img src="assets/avatar.png" alt="Second person's avatar">
+                    </div>
+                    <p class="eyebrow">WELCOME TO MY WORLD</p>
+                    <h1>Your Name</h1>
+                    <p class="subtitle">A new flower blooming beside Hide.</p>
+                    <div class="description">VTuber · Streamer · Creator</div>
+                </header>
+
+                <section class="social-section" aria-label="Second person's links">
+                    <p class="section-title">FIND ME HERE</p>
+                    <a class="social-link" href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span>↗</span></a>
+                    <a class="social-link" href="https://twitch.tv/" target="_blank" rel="noopener noreferrer"><span>Twitch</span><span>↗</span></a>
+                    <a class="social-link" href="https://discord.com/" target="_blank" rel="noopener noreferrer"><span>Discord Community</span><span>↗</span></a>
+                    <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer"><span>X / Twitter</span><span>↗</span></a>
+                </section>
+            </article>
+        </div>
+
+        <section class="music-section">
+            <p class="section-title">NOW PLAYING</p>
+            <div class="music-player">
+                <div class="music-info">
+                    <div class="music-cover">♫</div>
+                    <div>
+                        <h3>My Little Garden</h3>
+                        <p>Hide's Playlist</p>
+                    </div>
+                </div>
+                <button id="musicButton" aria-label="Play music">▶</button>
+                <audio id="music" src="assets/music.mp3" loop></audio>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Hide & Friend. All rights reserved.</p>
+            <p>Made with ♡ in the Abyss</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
